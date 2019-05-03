@@ -96,9 +96,12 @@ doc = Document.new xmlText
 
 # XPath Selector for listing the titles of the movies, in the same order as which they occur in the given XML.
 
-# Fill in the blanks to complete the required XPath selector query
-
+# GET POPULARITIES
 
 doc.elements.each("//popularity") { |element| puts element.text }
+
+# GET FORMAT OF MOVIES WHICH HAVE POPULARITY < 8
+
+doc.elements.each("*/movie[popularity<8]/format") { |element| puts element.text }
 
 
