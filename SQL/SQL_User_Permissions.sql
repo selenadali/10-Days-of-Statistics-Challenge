@@ -28,3 +28,6 @@ FROM
 WHERE grantee_principal_id>0
 ORDER BY
     OBJECT_NAME(major_id), USER_NAME(grantee_principal_id), permission_name 
+
+
+-- https://docs.microsoft.com/en-us/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql?view=sql-server-2017
